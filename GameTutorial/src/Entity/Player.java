@@ -5,6 +5,7 @@ import game.Game;
 import gfx.Animation;
 import gfx.Textures;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
@@ -35,6 +36,7 @@ public class Player extends CoreObject {
 		animeRight = new Animation(3, tex.playerRight);
 		animeLeft = new Animation(3, tex.playerLeft);
 	}
+	
 
 	@Override
 	public void tick() {
@@ -58,6 +60,12 @@ public class Player extends CoreObject {
 	@Override
 	public void render(Graphics g) {
 		Graphics2D g2 = (Graphics2D) g; // Added Graphics2D to test out this way
+
+		      g2.setColor(Color.red);
+		      g2.draw(getTopBounds());
+		      g2.draw(getBottomBounds());
+		      g2.draw(getRightBounds());
+		      g2.draw(getLeftBounds());
 
 		if (!moving) {
 			 if (direction == Direction.RIGHT)

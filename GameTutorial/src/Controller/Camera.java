@@ -20,7 +20,7 @@ public class Camera {
 	
 	public void tick() {
 		//x = - player.getX() + Game.WIDTH /2; //Puts player in the middle of the screen
-		x += ((-player.getX() + Game.WIDTH /2) -x) * .0275f;; //x +=(Target - value) * constant VERY COOL
+		x += ((-player.getX() + Game.WIDTH /2) -x) * .275f;; //x +=(Target - value) * constant VERY COOL
 	}
 
 	/**

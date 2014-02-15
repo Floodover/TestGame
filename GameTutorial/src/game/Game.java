@@ -19,6 +19,7 @@ import screens.Menu;
 import utils.AudioPlayer;
 import utils.ResourceLoader;
 import utils.TextFile;
+import utils.Updater;
 import world.Level;
 import Controller.Camera;
 import Controller.Controller;
@@ -122,6 +123,11 @@ public class Game extends Canvas implements Runnable {
 			LoadScreen.LoadBarMove();
 			return;	
 		case 9:
+			Updater.checkForUpdate(false);
+			counter++;
+			LoadScreen.LoadBarMove();
+			return;		
+		case 10:
 			counter++;
 			LoadScreen.LoadBarMove();
 			state = GameState.MENU;

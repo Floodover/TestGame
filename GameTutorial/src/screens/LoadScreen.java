@@ -14,7 +14,7 @@ public class LoadScreen {
 
 	private static int width = 541;
 	private static int height = 51;
-	private static int numResources = 9;
+	private static int numResources = 10;
 	private static int loadAdd = width /numResources;
 	private static int loadStatus = 0;
 	
